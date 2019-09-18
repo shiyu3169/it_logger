@@ -4,16 +4,20 @@ import M from "materialize-css/dist/js/materialize.min.js";
 import "./App.css";
 // Components
 import SearchBar from "./components/layout/SearchBar";
+import Logs from "./components/logs/Logs";
 
 function App() {
   useEffect(() => {
     // Init Materialize JS
     M.AutoInit();
-  });
+  }, []);
 
   return (
     <>
       <SearchBar />
+      <div className="container">
+        <Logs />
+      </div>
     </>
   );
 }
